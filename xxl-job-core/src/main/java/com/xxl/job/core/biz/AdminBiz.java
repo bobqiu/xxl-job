@@ -11,7 +11,8 @@ import java.util.List;
  */
 public interface AdminBiz {
 
-    public static final String MAPPING = "/api";
+
+    // ---------------------- callback ----------------------
 
     /**
      * callback
@@ -20,6 +21,9 @@ public interface AdminBiz {
      * @return
      */
     public ReturnT<String> callback(List<HandleCallbackParam> callbackParamList);
+
+
+    // ---------------------- registry ----------------------
 
     /**
      * registry
@@ -36,14 +40,5 @@ public interface AdminBiz {
      * @return
      */
     public ReturnT<String> registryRemove(RegistryParam registryParam);
-
-
-    /**
-     * trigger job for once
-     *
-     * @param jobId
-     * @return
-     */
-    public ReturnT<String> triggerJob(int jobId);
 
 }
